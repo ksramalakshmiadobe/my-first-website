@@ -1,8 +1,11 @@
-.section .franklin-banner-container {
-    background-color: blue;
-
-    .franklin-banner-wrapper{
-        background-color: black;
-    }
+.section #assignment-title, p{
+    margin: 0%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
+.section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
