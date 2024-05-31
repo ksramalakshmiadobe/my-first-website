@@ -46,6 +46,6 @@ export function decorateButtons(element) {
         }
       }
     }
-  a.textContent = 'click';
+    a.textContent = 'click';
   });
 }
