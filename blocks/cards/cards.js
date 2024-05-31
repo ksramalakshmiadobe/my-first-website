@@ -24,10 +24,10 @@ export default function decorate(block) {
 
 export function decorateButtons(element) {
   element.querySelectorAll('a').forEach((a) => {
-    a.title = a.title || a.textContent;
-    console.log('a title:', a.title);
-    console.log('a textcontent:', a.textContent);
-    a.textContent = click;
+    a.title = a.textContent;
+    // console.log('a title:', a.title);
+    // console.log('a textcontent:', a.textContent);
+    // a.textContent = click;
     if (a.href !== a.textContent) {
       const up = a.parentElement;
       const twoup = a.parentElement.parentElement;
