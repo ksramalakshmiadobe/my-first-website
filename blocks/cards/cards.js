@@ -1,5 +1,4 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-import { fetchPlaceholders } from '../../scripts/aem.js';
+import { createOptimizedPicture, fetchPlaceholders } from '../../scripts/aem.js';
 
 // fetch placeholders from the 'en' folder
 const placeholders = await fetchPlaceholders('en');
