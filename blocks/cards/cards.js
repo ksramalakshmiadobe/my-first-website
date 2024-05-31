@@ -5,7 +5,7 @@ const placeholders = await fetchPlaceholders('en');
 // retrieve the value for key 'foo'
 const { click } = placeholders;
 
-decorateButtons()
+decorateButtons();
 
 export default function decorate(block) {
   /* change to ul, li */
