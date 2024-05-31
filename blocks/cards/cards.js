@@ -26,7 +26,8 @@ export default function decorate(block) {
 export function decorateButtons(element) {
   element.querySelectorAll('a').forEach((a) => {
     a.title = a.title || a.textContent;
-    a.textContent = click;
+    console.log("a title:", a.title)
+    console.log("a textcontent:", a.textContent)
     if (a.href !== a.textContent) {
       const up = a.parentElement;
       const twoup = a.parentElement.parentElement;
