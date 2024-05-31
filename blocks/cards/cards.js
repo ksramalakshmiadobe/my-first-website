@@ -2,9 +2,10 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 import { fetchPlaceholders } from '/scripts/aem.js';
 
 // fetch placeholders from the 'en' folder
-const placeholders = await fetchPlaceholders('../../en');
+const placeholders = await fetchPlaceholders('./en');
 // retrieve the value for key 'foo'
 const { click } = placeholders;
+console.log(click)
 
 export default function decorate(block) {
   /* change to ul, li */
@@ -25,8 +26,7 @@ export default function decorate(block) {
 
 export function decorateButtons(element) {
   element.querySelectorAll('a').forEach((a) => {
-    console.log(click)
-    a.title = click;
+    a.title = a.title || a.textContent;
     if (a.href !== a.textContent) {
       const up = a.parentElement;
       const twoup = a.parentElement.parentElement;
