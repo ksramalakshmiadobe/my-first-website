@@ -26,9 +26,6 @@ export function decorateButtons(element) {
   element.querySelectorAll('a').forEach((a) => {
     a.title = a.title || a.textContent;
     a.innerHTML = click;
-    // console.log('a title:', a.title);
-    // console.log('a textcontent:', a.textContent);
-    // a.textContent = click;
     if (a.href !== a.textContent) {
       const up = a.parentElement;
       const twoup = a.parentElement.parentElement;
@@ -49,5 +46,6 @@ export function decorateButtons(element) {
         }
       }
     }
+  a.textContent = 'click';
   });
 }
