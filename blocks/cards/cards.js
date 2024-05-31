@@ -1,11 +1,9 @@
-import { createOptimizedPicture, fetchPlaceholders, decorateButtons } from '../../scripts/aem.js';
+import { createOptimizedPicture, fetchPlaceholders } from '../../scripts/aem.js';
 
 // fetch placeholders from the 'en' folder
 const placeholders = await fetchPlaceholders('en');
 // retrieve the value for key 'foo'
 const { click } = placeholders;
-
-// decorateButtons();
 
 export default function decorate(block) {
   /* change to ul, li */
@@ -23,3 +21,14 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
 }
+
+const highlights = document.getElementsByClassName("highlight");
+
+Array.from(highlights).forEach((highlight) => {
+  const buttons = highlight.getElementsByClassName("button");
+  
+  Array.from(buttons).forEach((button) => {
+    button.innerHTML = click;
+  });
+});
+
