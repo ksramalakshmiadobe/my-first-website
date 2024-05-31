@@ -1,5 +1,5 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
-import { fetchPlaceholders } from '/scripts/aem.js';
+import { fetchPlaceholders } from '../../scripts/aem.js';
 
 // fetch placeholders from the 'en' folder
 const placeholders = await fetchPlaceholders('en');
@@ -26,8 +26,9 @@ export default function decorate(block) {
 export function decorateButtons(element) {
   element.querySelectorAll('a').forEach((a) => {
     a.title = a.title || a.textContent;
-    console.log("a title:", a.title);
-    console.log("a textcontent:", a.textContent);
+    console.log('a title:', a.title);
+    console.log('a textcontent:', a.textContent);
+    a.textContent = click;
     if (a.href !== a.textContent) {
       const up = a.parentElement;
       const twoup = a.parentElement.parentElement;
