@@ -24,7 +24,7 @@ export default function decorate(block) {
 
 export function decorateButtons(element) {
   element.querySelectorAll('a').forEach((a) => {
-    a.innerHTML = click;
+    a.textContent = click;
     // console.log('a title:', a.title);
     // console.log('a textcontent:', a.textContent);
     // a.textContent = click;
