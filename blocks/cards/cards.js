@@ -22,13 +22,11 @@ export default function decorate(block) {
   block.append(ul);
 }
 
-const highlights = document.getElementsByClassName("highlight");
+const highlights = document.getElementsByClassName('highlight');
 
 Array.from(highlights).forEach((highlight) => {
-  const buttons = highlight.getElementsByClassName("button");
-  
+  const buttons = highlight.getElementsByClassName('button');
   Array.from(buttons).forEach((button) => {
     button.innerHTML = click;
   });
 });
-
